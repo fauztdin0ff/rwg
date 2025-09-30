@@ -188,6 +188,21 @@ __webpack_require__.r(__webpack_exports__);
 _modules_functions_js__WEBPACK_IMPORTED_MODULE_0__.isWebp();
 
 /*---------------------------------------------------------------------------
+Header fix
+---------------------------------------------------------------------------*/
+window.addEventListener('scroll', function () {
+   const header = document.querySelector('.header');
+   if (!header) return;
+
+   if (window.scrollY > 70) {
+      header.classList.add('fixed');
+   } else {
+      header.classList.remove('fixed');
+   }
+});
+
+
+/*---------------------------------------------------------------------------
 Search
 ---------------------------------------------------------------------------*/
 const menuSearch = document.querySelector('.menu__search');
@@ -444,10 +459,13 @@ document.addEventListener("DOMContentLoaded", () => {
       question.addEventListener("click", () => {
          const isActive = item.classList.contains("active");
 
-         if (isActive) {
-            item.classList.remove("active");
-            answer.style.maxHeight = null;
-         } else {
+         faqItems.forEach(i => {
+            i.classList.remove("active");
+            const a = i.querySelector(".product__accordion-body");
+            if (a) a.style.maxHeight = null;
+         });
+
+         if (!isActive) {
             item.classList.add("active");
             answer.style.maxHeight = answer.scrollHeight + 24 + "px";
          }
@@ -568,7 +586,11 @@ document.addEventListener("DOMContentLoaded", function () {
    if (openButtons && openButtons.length > 0) {
       openButtons.forEach(button => {
          if (!button) return;
-         button.addEventListener('click', function () {
+         button.addEventListener('click', function (e) {
+            if (this.tagName.toLowerCase() === 'a') {
+               e.preventDefault();
+            }
+
             const popupId = this.dataset.popup;
             if (!popupId) return;
 
