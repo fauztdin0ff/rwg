@@ -468,15 +468,36 @@ document.addEventListener("DOMContentLoaded", () => {
          if (!isActive) {
             item.classList.add("active");
             answer.style.maxHeight = answer.scrollHeight + 24 + "px";
+
+            setTimeout(() => {
+               const rect = item.getBoundingClientRect();
+               const windowHeight = window.innerHeight;
+
+               const contentHigherThanViewport = rect.height > windowHeight;
+               const elementBelowViewport = rect.bottom > windowHeight;
+               const elementAboveViewport = rect.top < 0;
+
+               if (contentHigherThanViewport || elementBelowViewport || elementAboveViewport) {
+                  const headerOffset = 80;
+                  const elementPosition = item.getBoundingClientRect().top + window.scrollY;
+                  const offsetPosition = elementPosition - headerOffset;
+
+                  window.scrollTo({
+                     top: offsetPosition,
+                     behavior: "smooth"
+                  });
+               }
+            }, 310);
          }
       });
    });
 });
 
+
 /*---------------------------------------------------------------------------
 Product gallery
 ---------------------------------------------------------------------------*/
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
    const sliderEl = document.querySelector('.product__slider');
    if (!sliderEl) return;
 
@@ -503,6 +524,80 @@ document.addEventListener('DOMContentLoaded', function () {
       Toolbar: { display: ['close'] },
       dragToClose: true,
    });
+});
+ */
+
+document.addEventListener('DOMContentLoaded', function () {
+   const mainEl = document.querySelector('#product-main');
+   const thumbsEl = document.querySelector('#product-thumbs');
+
+   if (!mainEl) return;
+
+   // Проверяем количество слайдов в DOM
+   const mainSlidesCount = mainEl.querySelectorAll('.splide__slide').length;
+   const thumbsSlidesCount = thumbsEl ? thumbsEl.querySelectorAll('.splide__slide').length : 0;
+
+   if (mainSlidesCount <= 1) {
+      // Нет смысла инициализировать
+      return;
+   }
+
+   // Инициализируем thumbs, только если он есть и в нём есть слайды
+   let thumbs = null;
+   if (thumbsEl && thumbsSlidesCount > 0) {
+      thumbs = new Splide(thumbsEl, {
+         perPage: 7,
+         gap: 10,
+         rewind: true,
+         pagination: false,
+         isNavigation: true,
+         arrows: false,
+         focus: 0,
+         breakpoints: { 1024: { perPage: 7 }, 768: { perPage: 5 } },
+      });
+
+      try {
+         thumbs.mount();
+      } catch (e) {
+         console.error('thumbs.mount error', e);
+         thumbs = null;
+      }
+   }
+
+   const main = new Splide(mainEl, {
+      type: 'fade',
+      rewind: true,
+      pagination: false,
+      arrows: true,
+   });
+
+   if (thumbs &&
+      thumbs.Components &&
+      thumbs.Components.Slides &&
+      typeof thumbs.Components.Slides.getAt === 'function') {
+      try {
+         main.sync(thumbs);
+      } catch (err) {
+         console.error('main.sync error', err);
+      }
+   } else {
+      console.warn('thumbs не готов — синхронизация пропущена');
+   }
+
+   try {
+      main.mount();
+   } catch (e) {
+      console.error('main.mount error', e);
+   }
+
+   // Fancybox
+   if (window.Fancybox) {
+      Fancybox.bind('[data-fancybox="team-gallery"]', {
+         Thumbs: { autoStart: false },
+         Toolbar: { display: ['close'] },
+         dragToClose: true,
+      });
+   }
 });
 
 
