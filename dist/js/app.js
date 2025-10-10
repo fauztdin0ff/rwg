@@ -420,8 +420,17 @@ document.addEventListener("DOMContentLoaded", () => {
    addCartButtons.forEach(button => {
       button.addEventListener("click", () => {
          const addCart = button.closest(".add-cart");
+         const productButtons = button.closest(".product__buttons");
+         const quantityBlock = productButtons?.querySelector(".product__quantity");
+
+         // добавляем класс .added для add-cart
          if (addCart) {
             addCart.classList.add("added");
+         }
+
+         // показываем количество товара
+         if (quantityBlock) {
+            quantityBlock.classList.add("active");
          }
       });
    });
