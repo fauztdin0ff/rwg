@@ -423,12 +423,10 @@ document.addEventListener("DOMContentLoaded", () => {
          const productButtons = button.closest(".product__buttons");
          const quantityBlock = productButtons?.querySelector(".product__quantity");
 
-         // добавляем класс .added для add-cart
          if (addCart) {
             addCart.classList.add("added");
          }
 
-         // показываем количество товара
          if (quantityBlock) {
             quantityBlock.classList.add("active");
          }
@@ -506,52 +504,16 @@ document.addEventListener("DOMContentLoaded", () => {
 /*---------------------------------------------------------------------------
 Product gallery
 ---------------------------------------------------------------------------*/
-/* document.addEventListener('DOMContentLoaded', function () {
-   const sliderEl = document.querySelector('.product__slider');
-   if (!sliderEl) return;
-
-   const slides = sliderEl.querySelectorAll('.splide__slide');
-   const perPage = 1;
-
-   if (slides.length > perPage) {
-      new Splide(sliderEl, {
-         perPage: perPage,
-         arrows: true,
-         pagination: true,
-         gap: '1rem',
-      }).mount();
-   } else {
-      sliderEl.classList.remove('splide');
-      sliderEl.querySelector('.splide__track')?.classList.remove('splide__track');
-      sliderEl.querySelector('.splide__list')?.classList.remove('splide__list');
-      slides.forEach(slide => slide.classList.remove('splide__slide'));
-   }
-
-   // fancybox
-   Fancybox.bind('[data-fancybox="team-gallery"]', {
-      Thumbs: { autoStart: false },
-      Toolbar: { display: ['close'] },
-      dragToClose: true,
-   });
-});
- */
-
 document.addEventListener('DOMContentLoaded', function () {
    const mainEl = document.querySelector('#product-main');
    const thumbsEl = document.querySelector('#product-thumbs');
 
    if (!mainEl) return;
 
-   // Проверяем количество слайдов в DOM
    const mainSlidesCount = mainEl.querySelectorAll('.splide__slide').length;
    const thumbsSlidesCount = thumbsEl ? thumbsEl.querySelectorAll('.splide__slide').length : 0;
 
-   if (mainSlidesCount <= 1) {
-      // Нет смысла инициализировать
-      return;
-   }
 
-   // Инициализируем thumbs, только если он есть и в нём есть слайды
    let thumbs = null;
    if (thumbsEl && thumbsSlidesCount > 0) {
       thumbs = new Splide(thumbsEl, {
@@ -778,9 +740,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*---------------------------------------------------------------------------
 Cabinet accordion
----------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------
-FAQ
 ---------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
    const faqItems = document.querySelectorAll(".orders__item");
