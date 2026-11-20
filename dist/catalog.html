@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,56 +31,56 @@
 <body>
    <div class="wrapper">
       <!-- Header unauthorized-->
-<header class="header">
-   <div class="header__body container">
-      <div class="header__logo">
-         <a href="index.html" aria-label="Главная">
-            <img src="img/logo-icon.svg" width="62" height="23" alt="logo">
-         </a>
-      </div>
-      <nav class="header__menu menu">
-         <div class="menu__mobile">
-            <a href="wishlist.html" class="menu__mobile-link menu__mobile-fav">
-               <svg>
-                  <use xlink:href="#icon-heart"></use>
-               </svg>
-            </a>
-            <a href="wishlist.html" class="menu__mobile-link menu__mobile-cart">
-               ( 1 )
-               <svg>
-                  <use xlink:href="#icon-arrow"></use>
-               </svg>
-            </a>
-         </div>
-         <button type="button" class="menu__icon" aria-label="Меню">
-            <svg class="menu__svg" width="24" height="24" viewBox="0 0 24 24">
-               <line class="line top" x1="5" y1="9" x2="19" y2="9" />
-               <line class="line bottom" x1="5" y1="15" x2="19" y2="15" />
-            </svg>
-         </button>
-         <div class="menu__body">
-            <div class="menu__search">
-               <form class="menu__search-form">
-                  <input type="text" placeholder="Поиск" required>
-                  <button type="submit" class="menu__search-btn">
-                     <svg>
-                        <use xlink:href="#icon-glass"></use>
-                     </svg>
-                  </button>
-               </form>
+      <header class="header">
+         <div class="header__body container">
+            <div class="header__logo">
+               <a href="index.html" aria-label="Главная">
+                  <img src="img/logo-icon.svg" width="62" height="23" alt="logo">
+               </a>
             </div>
-            <a href="catalog.html" class="menu__link">Каталог</a>
-            <a href="information.html" class="menu__link">Информация</a>
-            <a href="#" class="menu__link open-popup" data-popup="cart-popup">Корзина <span>(1)</span></a>
-            <a href="tel:+79990000000" class="menu__link -orange">Позвонить</a>
-            <button type="button" class="menu__button open-popup" data-popup="auth-popup">Личный кабинет</button>
+            <nav class="header__menu menu">
+               <div class="menu__mobile">
+                  <a href="wishlist.html" class="menu__mobile-link menu__mobile-fav">
+                     <svg>
+                        <use xlink:href="#icon-heart"></use>
+                     </svg>
+                  </a>
+                  <a href="wishlist.html" class="menu__mobile-link menu__mobile-cart">
+                     ( 1 )
+                     <svg>
+                        <use xlink:href="#icon-arrow"></use>
+                     </svg>
+                  </a>
+               </div>
+               <button type="button" class="menu__icon" aria-label="Меню">
+                  <svg class="menu__svg" width="24" height="24" viewBox="0 0 24 24">
+                     <line class="line top" x1="5" y1="9" x2="19" y2="9" />
+                     <line class="line bottom" x1="5" y1="15" x2="19" y2="15" />
+                  </svg>
+               </button>
+               <div class="menu__body">
+                  <div class="menu__search">
+                     <form class="menu__search-form">
+                        <input type="text" placeholder="Поиск" required>
+                        <button type="submit" class="menu__search-btn">
+                           <svg>
+                              <use xlink:href="#icon-glass"></use>
+                           </svg>
+                        </button>
+                     </form>
+                  </div>
+                  <a href="catalog.html" class="menu__link">Каталог</a>
+                  <a href="information.html" class="menu__link">Информация</a>
+                  <a href="#" class="menu__link open-popup" data-popup="cart-popup">Корзина <span>(1)</span></a>
+                  <a href="tel:+79990000000" class="menu__link -orange">Позвонить</a>
+                  <button type="button" class="menu__button open-popup" data-popup="auth-popup">Личный кабинет</button>
+               </div>
+            </nav>
          </div>
-      </nav>
-   </div>
-</header>
+      </header>
 
-<!-- Header authorized-->
-<!-- <header class="header">
+      <!-- Header authorized-->
+      <!-- <header class="header">
    <div class="header__body container">
       <div class="header__logo">
          <a href="index.html" aria-label="Главная">
@@ -302,7 +303,7 @@
 
                <div class="catalog__content">
                   <div class="catalog__products">
-                     <div class="catalog__product product-preview">
+                     <div class="catalog__product product-preview -unavailable">
                         <div class="product-preview__head">
                            <a href="product.html" class="product-preview__name">Фильтр механический высокой
                               производительности
@@ -319,21 +320,7 @@
                         <div class="product-preview__panel">
                            <div class="product-preview__price">425 000 ₽</div>
                            <div class="product-preview__buttons">
-                              <!-- <button type="button" class="product-preview__fav" aria-label="В избранное">
-                                 <svg>
-                                    <use xlink:href="#icon-heart"></use>
-                                 </svg>
-                              </button> -->
-                              <button type="button" class="product-preview__cart">
-                                 В Корзину
-                              </button>
-                              <a href="#" class="product-preview__redirect open-popup" data-popup="cart-popup"
-                                 title="Открыть корзину">
-                                 ( 1 )
-                                 <svg>
-                                    <use xlink:href="#icon-arrow"></use>
-                                 </svg>
-                              </a>
+                              <span class="product-preview__unavailable">нет в наличии</span>
                            </div>
                         </div>
                      </div>
@@ -546,131 +533,188 @@
          </section>
       </main>
       <footer class="footer" id="contacts">
-   <div class="footer__body container">
-      <div class="footer__logo">
-         <img src="img/logo-brand.svg" width="1860" height="205.5" alt="Logo">
-      </div>
-      <div class="footer__info">
-         <div class="footer__col">
-            <div class="footer__address">
-               г. Москва, <br> Ярославское шоссе, <br> д. 144А
+         <div class="footer__body container">
+            <div class="footer__logo">
+               <img src="img/logo-brand.svg" width="1860" height="205.5" alt="Logo">
             </div>
-            <div class="footer__button">
-               <button type="button" class="btn btn-orange open-popup" data-popup="request-popup">
-                  оставить заявку
-                  <svg>
-                     <use xlink:href="#icon-arrow"></use>
-                  </svg>
-               </button>
+            <div class="footer__info">
+               <div class="footer__col">
+                  <div class="footer__address">
+                     г. Москва, <br> Ярославское шоссе, <br> д. 144А
+                  </div>
+                  <div class="footer__button">
+                     <button type="button" class="btn btn-orange open-popup" data-popup="request-popup">
+                        оставить заявку
+                        <svg>
+                           <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div class="footer__col">
+                  <div class="footer__map" id="map">
+                  </div>
+               </div>
+            </div>
+            <div class="footer__more">
+               <div class="footer__copyright">
+                  <p>
+                     Rus Water Group <br>
+                     2025
+                  </p>
+                  <p class="footer__creater">
+                     Created by <br>
+                     <a href="https://www.designpill.one/" target="_blank">Design Pill Studio</a>
+                  </p>
+               </div>
+               <div class="footer__contacts">
+                  <a href="tel:+74993253276" class="footer__contact">+7 499 325 32 76</a>
+                  <a href="mailto:info@rwg-opt.ru" class="footer__contact">info@rwg-opt.ru</a>
+               </div>
             </div>
          </div>
-         <div class="footer__col">
-            <div class="footer__map" id="map">
-            </div>
-         </div>
-      </div>
-      <div class="footer__more">
-         <div class="footer__copyright">
-            <p>
-               Rus Water Group <br>
-               2025
-            </p>
-            <p class="footer__creater">
-               Created by <br>
-               <a href="https://www.designpill.one/" target="_blank">Design Pill Studio</a>
-            </p>
-         </div>
-         <div class="footer__contacts">
-            <a href="tel:+74993253276" class="footer__contact">+7 499 325 32 76</a>
-            <a href="mailto:info@rwg-opt.ru" class="footer__contact">info@rwg-opt.ru</a>
-         </div>
-      </div>
-   </div>
-</footer>
+      </footer>
    </div>
    <script src="js/app.js"></script>
    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-   style="display: none;">
-   <svg fill="none" viewBox="0 0 32 32" id="icon-arrow" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M3.838 24.768a2.4 2.4 0 1 0 3.394 3.394l-1.697-1.697-1.697-1.697ZM28.865 5.535a2.4 2.4 0 0 0-2.4-2.4h-21.6a2.4 2.4 0 1 0 0 4.8h19.2v19.2a2.4 2.4 0 1 0 4.8 0v-21.6Zm-23.33 20.93 1.697 1.697 20.93-20.93-1.697-1.697-1.697-1.697-20.93 20.93 1.697 1.697Z"
-         fill="currentColor" />
+      style="display: none;">
+      <svg fill="none" viewBox="0 0 32 32" id="icon-arrow" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M3.838 24.768a2.4 2.4 0 1 0 3.394 3.394l-1.697-1.697-1.697-1.697ZM28.865 5.535a2.4 2.4 0 0 0-2.4-2.4h-21.6a2.4 2.4 0 1 0 0 4.8h19.2v19.2a2.4 2.4 0 1 0 4.8 0v-21.6Zm-23.33 20.93 1.697 1.697 20.93-20.93-1.697-1.697-1.697-1.697-20.93 20.93 1.697 1.697Z"
+            fill="currentColor" />
+      </svg>
+      <svg fill="none" viewBox="0 0 24 24" id="icon-upload" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M12 16V10M12 10L9 12M12 10L15 12M23 15C23 12.7909 21.2091 11 19 11C18.9764 11 18.9532 11.0002 18.9297 11.0006C18.4447 7.60802 15.5267 5 12 5C9.20335 5 6.79019 6.64004 5.66895 9.01082C3.06206 9.18144 1 11.3498 1 13.9999C1 16.7613 3.23858 19.0001 6 19.0001L19 19C21.2091 19 23 17.2091 23 15Z"
+            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 14 18" id="icon-file" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M7.80234 1.8005C7.72595 1.7998 7.64017 1.7998 7.54212 1.7998H3.9625C3.06642 1.7998 2.61804 1.7998 2.27578 1.97419C1.97472 2.12759 1.73013 2.37218 1.57673 2.67324C1.40234 3.0155 1.40234 3.46388 1.40234 4.35996V13.64C1.40234 14.536 1.40234 14.9839 1.57673 15.3261C1.73013 15.6272 1.97472 15.8722 2.27578 16.0256C2.61771 16.1998 3.06555 16.1998 3.9599 16.1998L10.0448 16.1998C10.9391 16.1998 11.3863 16.1998 11.7283 16.0256C12.0293 15.8722 12.2747 15.6272 12.4281 15.3261C12.6023 14.9842 12.6023 14.537 12.6023 13.6427V6.86035C12.6023 6.76217 12.6023 6.67629 12.6016 6.5998M7.80234 1.8005C8.03085 1.80258 8.17541 1.81088 8.31342 1.84401C8.47668 1.88321 8.63263 1.94802 8.77578 2.03574C8.9372 2.13466 9.0758 2.27326 9.35234 2.5498L11.8527 5.05019C12.1295 5.32691 12.267 5.46489 12.366 5.62636C12.4537 5.76952 12.5186 5.92561 12.5578 6.08887C12.5909 6.22681 12.5994 6.37141 12.6016 6.5998M7.80234 1.8005V4.0398C7.80234 4.93589 7.80234 5.38362 7.97673 5.72588C8.13013 6.02694 8.37472 6.27219 8.67578 6.42559C9.01771 6.59981 9.46554 6.59981 10.3599 6.5998H12.6016M12.6016 6.5998H12.6025"
+            stroke="black" stroke-width="1.92" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 16 8" id="icon-menu" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1 7H15M1 1H15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 15 12" id="icon-check" xmlns="http://www.w3.org/2000/svg">
+         <path d="m1 6 4.243 4.243 8.484-8.486" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 10 18" id="icon-chevron" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1.665 2.333 8.332 9l-6.667 6.667" stroke="currentColor" stroke-width="3.333" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 14 14" id="icon-close" xmlns="http://www.w3.org/2000/svg">
+         <path d="M13 13 7 7m0 0L1 1m6 6 6-6M7 7l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 24 16" id="icon-cloud" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M12 12V6m0 0L9 8m3-2 3 2m8 3a4 4 0 0 0-4.07-4A7.002 7.002 0 0 0 5.669 5.01 5 5 0 0 0 6 15h13a4 4 0 0 0 4-4Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="currentColor" viewBox="0 0 16 16" id="icon-eye-opened" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+         <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+      </svg>
+      <svg fill="currentColor" viewBox="0 0 16 16" id="icon-eye-closed" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z" />
+         <path
+            d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829" />
+         <path
+            d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z" />
+      </svg>
+      <svg fill="none" viewBox="0 0 18 20" id="icon-delete" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M11 8v7M7 8v7M3 4v11.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h5.606c1.118 0 1.677 0 2.104-.218.377-.192.684-.498.875-.874.218-.428.218-.987.218-2.105V4M3 4h2M3 4H1m4 0h8M5 4c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.082-1.083C6.602 1 7.068 1 8 1h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C13 2.602 13 3.068 13 4m0 0h2m0 0h2"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 24 24" id="icon-glass" xmlns="http://www.w3.org/2000/svg">
+         <path d="m15.198 15.2 6.4 6.4M9.865 17.333a7.467 7.467 0 1 1 0-14.933 7.467 7.467 0 0 1 0 14.933Z"
+            stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 32 29" id="icon-heart" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M28.062 4.396a6.83 6.83 0 0 1 .224 9.423L16 27.333 3.714 13.82a6.83 6.83 0 0 1 .224-9.424c2.878-2.878 7.618-2.615 10.161.564L16 7.334l1.9-2.376c2.542-3.178 7.284-3.44 10.162-.562Z"
+            stroke="currentColor" stroke-width="3.333" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 20 4" id="icon-minus" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2 2h16" stroke="currentColor" stroke-width="2.667" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg fill="none" viewBox="0 0 24 24" id="icon-plus" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2 12h10m0 0h10m-10 0v10m0-10V2" stroke="currentColor" stroke-width="3.333" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg>
    </svg>
-   <svg fill="none" viewBox="0 0 24 24" id="icon-upload" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M12 16V10M12 10L9 12M12 10L15 12M23 15C23 12.7909 21.2091 11 19 11C18.9764 11 18.9532 11.0002 18.9297 11.0006C18.4447 7.60802 15.5267 5 12 5C9.20335 5 6.79019 6.64004 5.66895 9.01082C3.06206 9.18144 1 11.3498 1 13.9999C1 16.7613 3.23858 19.0001 6 19.0001L19 19C21.2091 19 23 17.2091 23 15Z"
-         stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 14 18" id="icon-file" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M7.80234 1.8005C7.72595 1.7998 7.64017 1.7998 7.54212 1.7998H3.9625C3.06642 1.7998 2.61804 1.7998 2.27578 1.97419C1.97472 2.12759 1.73013 2.37218 1.57673 2.67324C1.40234 3.0155 1.40234 3.46388 1.40234 4.35996V13.64C1.40234 14.536 1.40234 14.9839 1.57673 15.3261C1.73013 15.6272 1.97472 15.8722 2.27578 16.0256C2.61771 16.1998 3.06555 16.1998 3.9599 16.1998L10.0448 16.1998C10.9391 16.1998 11.3863 16.1998 11.7283 16.0256C12.0293 15.8722 12.2747 15.6272 12.4281 15.3261C12.6023 14.9842 12.6023 14.537 12.6023 13.6427V6.86035C12.6023 6.76217 12.6023 6.67629 12.6016 6.5998M7.80234 1.8005C8.03085 1.80258 8.17541 1.81088 8.31342 1.84401C8.47668 1.88321 8.63263 1.94802 8.77578 2.03574C8.9372 2.13466 9.0758 2.27326 9.35234 2.5498L11.8527 5.05019C12.1295 5.32691 12.267 5.46489 12.366 5.62636C12.4537 5.76952 12.5186 5.92561 12.5578 6.08887C12.5909 6.22681 12.5994 6.37141 12.6016 6.5998M7.80234 1.8005V4.0398C7.80234 4.93589 7.80234 5.38362 7.97673 5.72588C8.13013 6.02694 8.37472 6.27219 8.67578 6.42559C9.01771 6.59981 9.46554 6.59981 10.3599 6.5998H12.6016M12.6016 6.5998H12.6025"
-         stroke="black" stroke-width="1.92" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 16 8" id="icon-menu" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 7H15M1 1H15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 15 12" id="icon-check" xmlns="http://www.w3.org/2000/svg">
-      <path d="m1 6 4.243 4.243 8.484-8.486" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-         stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 10 18" id="icon-chevron" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.665 2.333 8.332 9l-6.667 6.667" stroke="currentColor" stroke-width="3.333" stroke-linecap="round"
-         stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 14 14" id="icon-close" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 13 7 7m0 0L1 1m6 6 6-6M7 7l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-         stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 24 16" id="icon-cloud" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M12 12V6m0 0L9 8m3-2 3 2m8 3a4 4 0 0 0-4.07-4A7.002 7.002 0 0 0 5.669 5.01 5 5 0 0 0 6 15h13a4 4 0 0 0 4-4Z"
-         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="currentColor" viewBox="0 0 16 16" id="icon-eye-opened" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
-      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
-   </svg>
-   <svg fill="currentColor" viewBox="0 0 16 16" id="icon-eye-closed" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z" />
-      <path
-         d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829" />
-      <path
-         d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z" />
-   </svg>
-   <svg fill="none" viewBox="0 0 18 20" id="icon-delete" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M11 8v7M7 8v7M3 4v11.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h5.606c1.118 0 1.677 0 2.104-.218.377-.192.684-.498.875-.874.218-.428.218-.987.218-2.105V4M3 4h2M3 4H1m4 0h8M5 4c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.082-1.083C6.602 1 7.068 1 8 1h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C13 2.602 13 3.068 13 4m0 0h2m0 0h2"
-         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 24 24" id="icon-glass" xmlns="http://www.w3.org/2000/svg">
-      <path d="m15.198 15.2 6.4 6.4M9.865 17.333a7.467 7.467 0 1 1 0-14.933 7.467 7.467 0 0 1 0 14.933Z"
-         stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 32 29" id="icon-heart" xmlns="http://www.w3.org/2000/svg">
-      <path
-         d="M28.062 4.396a6.83 6.83 0 0 1 .224 9.423L16 27.333 3.714 13.82a6.83 6.83 0 0 1 .224-9.424c2.878-2.878 7.618-2.615 10.161.564L16 7.334l1.9-2.376c2.542-3.178 7.284-3.44 10.162-.562Z"
-         stroke="currentColor" stroke-width="3.333" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 20 4" id="icon-minus" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 2h16" stroke="currentColor" stroke-width="2.667" stroke-linecap="round" stroke-linejoin="round" />
-   </svg>
-   <svg fill="none" viewBox="0 0 24 24" id="icon-plus" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 12h10m0 0h10m-10 0v10m0-10V2" stroke="currentColor" stroke-width="3.333" stroke-linecap="round"
-         stroke-linejoin="round" />
-   </svg>
-</svg>
    <!--Счет popup-->
-<div class="popup check-popup" id="check-popup">
-   <div class="popup__body check-popup__body">
-      <div class="check-popup__invoice">
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-         <div id="pdf-viewer"></div>
+   <div class="popup check-popup" id="check-popup">
+      <div class="popup__body check-popup__body">
+         <div class="check-popup__invoice">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+            <div id="pdf-viewer"></div>
+         </div>
+         <div class="check-popup__info">
+            <div class="popup__head">
+               <div class="popup__title">Счет 01234</div>
+               <div class="popup__close popup__back">
+                  <svg>
+                     <use xlink:href="#icon-chevron"></use>
+                  </svg>
+               </div>
+            </div>
+            <div class="popup__content">
+               <table class="check-popup__table">
+                  <thead>
+                     <tr>
+                        <th>заказ от: 10 августа 2025</th>
+                        <th>сумма, Руб.</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>0004</td>
+                        <td>215 000</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="popup__buttons">
+               <a href="" class="btn-black">Скачать в PDF</a>
+               <button class="btn-white popup__close">Назад</button>
+            </div>
+         </div>
       </div>
-      <div class="check-popup__info">
+   </div>
+   <script>
+      const url = "files/pdf-example.pdf";
+      const container = document.getElementById("pdf-viewer");
+
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+         // отобразим все страницы
+         for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            pdf.getPage(pageNum).then(page => {
+               const scale = 1.2;
+               const viewport = page.getViewport({ scale });
+               const canvas = document.createElement("canvas");
+               const context = canvas.getContext("2d");
+               canvas.height = viewport.height;
+               canvas.width = viewport.width;
+               container.appendChild(canvas);
+
+               page.render({ canvasContext: context, viewport });
+            });
+         }
+      });
+   </script>
+
+
+   <!--Измененине данных-->
+   <div class="popup edit-name-popup" id="edit-name-popup">
+      <div class="popup__body">
          <div class="popup__head">
-            <div class="popup__title">Счет 01234</div>
+            <div class="popup__title">изменение данных</div>
             <div class="popup__close popup__back">
                <svg>
                   <use xlink:href="#icon-chevron"></use>
@@ -678,6 +722,169 @@
             </div>
          </div>
          <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Фамилия" value="Чешев" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Имя" value="Василий" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="email" class="input" placeholder="Email" value="username@email.com" required>
+               </div>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">Сохранить</button>
+                  <button type="reset" class="btn-white popup__close">Назад</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!--Измененине профиля-->
+   <div class="popup edit-profile-popup" id="edit-profile-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">изменение профиля</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="ИНН" value="01234567" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Юридическое лицо" value="ИП Чешев Василий Владиславович"
+                     required>
+               </div>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">Сохранить</button>
+                  <button type="reset" class="btn-white popup__close">Назад</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!--Создание профиля-->
+   <div class="popup new-profile-popup" id="new-profile-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">создание профиля</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="ИНН" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Юридическое лицо" required>
+               </div>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">Сохранить</button>
+                  <button type="reset" class="btn-white popup__close">Назад</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!--Удаление профиля-->
+   <div class="popup delete-profile-popup" id="delete-profile-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">удаление профиля</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-subtitle">Вы уверены, что хотите удалить сохраненный профиль?</div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="ИНН" value="01234567" disabled required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Юридическое лицо" value="ИП Чешев Василий Владиславович"
+                     disabled required>
+               </div>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">Удалить</button>
+                  <button type="reset" class="btn-white popup__close">Назад</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!--Удаление профиля-->
+   <div class="popup cancel-order-popup" id="cancel-order-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Отмена заказа</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-subtitle">Вы уверены, что хотите отменить заказ?</div>
+               <table class="check-popup__table">
+                  <thead>
+                     <tr>
+                        <th>заказ от: 10 августа 2025</th>
+                        <th>сумма, Руб.</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>0004</td>
+                        <td>215 000</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="ИНН" value="01234567" disabled required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Юридическое лицо" value="ИП Чешев Василий Владиславович"
+                     disabled required>
+               </div>
+            </form>
+         </div>
+         <div class="popup__buttons">
+            <button type="button" class="btn-black">Удалить</button>
+            <button type="button" class="btn-white popup__close">Назад</button>
+         </div>
+      </div>
+   </div>
+
+   <!--Удаление профиля успешно-->
+   <div class="popup cancel-order-success-popup" id="cancel-order-success-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Отмена заказа</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <div class="popup__form-subtitle">Ваш заказ успешно отменен</div>
             <table class="check-popup__table">
                <thead>
                   <tr>
@@ -694,579 +901,360 @@
             </table>
          </div>
          <div class="popup__buttons">
-            <a href="" class="btn-black">Скачать в PDF</a>
-            <button class="btn-white popup__close">Назад</button>
+            <button type="reset" class="btn-white popup__close">Назад</button>
          </div>
       </div>
    </div>
-</div>
-<script>
-   const url = "files/pdf-example.pdf";
-   const container = document.getElementById("pdf-viewer");
 
-   pdfjsLib.getDocument(url).promise.then(pdf => {
-      // отобразим все страницы
-      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-         pdf.getPage(pageNum).then(page => {
-            const scale = 1.2;
-            const viewport = page.getViewport({ scale });
-            const canvas = document.createElement("canvas");
-            const context = canvas.getContext("2d");
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            container.appendChild(canvas);
-
-            page.render({ canvasContext: context, viewport });
-         });
-      }
-   });
-</script>
-
-
-<!--Измененине данных-->
-<div class="popup edit-name-popup" id="edit-name-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">изменение данных</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
+   <!--Авторизация-->
+   <div class="popup auth-popup" id="auth-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Авторизация</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
          </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Фамилия" value="Чешев" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Имя" value="Василий" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="email" class="input" placeholder="Email" value="username@email.com" required>
-            </div>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">Сохранить</button>
-               <button type="reset" class="btn-white popup__close">Назад</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<!--Измененине профиля-->
-<div class="popup edit-profile-popup" id="edit-profile-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">изменение профиля</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="ИНН" value="01234567" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Юридическое лицо" value="ИП Чешев Василий Владиславович"
-                  required>
-            </div>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">Сохранить</button>
-               <button type="reset" class="btn-white popup__close">Назад</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<!--Создание профиля-->
-<div class="popup new-profile-popup" id="new-profile-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">создание профиля</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="ИНН" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Юридическое лицо" required>
-            </div>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">Сохранить</button>
-               <button type="reset" class="btn-white popup__close">Назад</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<!--Удаление профиля-->
-<div class="popup delete-profile-popup" id="delete-profile-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">удаление профиля</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-subtitle">Вы уверены, что хотите удалить сохраненный профиль?</div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="ИНН" value="01234567" disabled required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Юридическое лицо" value="ИП Чешев Василий Владиславович"
-                  disabled required>
-            </div>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">Удалить</button>
-               <button type="reset" class="btn-white popup__close">Назад</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<!--Удаление профиля-->
-<div class="popup cancel-order-popup" id="cancel-order-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Отмена заказа</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-subtitle">Вы уверены, что хотите отменить заказ?</div>
-            <table class="check-popup__table">
-               <thead>
-                  <tr>
-                     <th>заказ от: 10 августа 2025</th>
-                     <th>сумма, Руб.</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>0004</td>
-                     <td>215 000</td>
-                  </tr>
-               </tbody>
-            </table>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="ИНН" value="01234567" disabled required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Юридическое лицо" value="ИП Чешев Василий Владиславович"
-                  disabled required>
-            </div>
-         </form>
-      </div>
-      <div class="popup__buttons">
-         <button type="button" class="btn-black">Удалить</button>
-         <button type="button" class="btn-white popup__close">Назад</button>
-      </div>
-   </div>
-</div>
-
-<!--Удаление профиля успешно-->
-<div class="popup cancel-order-success-popup" id="cancel-order-success-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Отмена заказа</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <div class="popup__form-subtitle">Ваш заказ успешно отменен</div>
-         <table class="check-popup__table">
-            <thead>
-               <tr>
-                  <th>заказ от: 10 августа 2025</th>
-                  <th>сумма, Руб.</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>0004</td>
-                  <td>215 000</td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
-      <div class="popup__buttons">
-         <button type="reset" class="btn-white popup__close">Назад</button>
-      </div>
-   </div>
-</div>
-
-<!--Авторизация-->
-<div class="popup auth-popup" id="auth-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Авторизация</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-area">
-               <input type="email" class="input" placeholder="Email" required>
-            </div>
-            <div class="popup__form-area password-area">
-               <input type="password" class="input password-input" placeholder="Пароль" required>
-               <div class="password-icon">
-                  <svg class="password-icon__opened">
-                     <use xlink:href="#icon-eye-opened"></use>
-                  </svg>
-                  <svg class="password-icon__closed">
-                     <use xlink:href="#icon-eye-closed"></use>
-                  </svg>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-area">
+                  <input type="email" class="input" placeholder="Email" required>
                </div>
-            </div>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">Войти</button>
-               <button type="button" class="btn-white popup__close">Зарегистрироваться</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<!--Регистрация-->
-<div class="popup registration-popup" id="registration-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Регистрация</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Имя" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Фамилия" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input tel-mask" placeholder="Телефон" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="email" class="input" placeholder="Email" required>
-            </div>
-
-            <div class="custom-dropdown">
-               <div class="custom-dropdown__button">
-                  выберите Тип пользователя
-                  <div class="custom-dropdown__icon">
-                     <svg>
-                        <use xlink:href="#icon-chevron"></use>
+               <div class="popup__form-area password-area">
+                  <input type="password" class="input password-input" placeholder="Пароль" required>
+                  <div class="password-icon">
+                     <svg class="password-icon__opened">
+                        <use xlink:href="#icon-eye-opened"></use>
+                     </svg>
+                     <svg class="password-icon__closed">
+                        <use xlink:href="#icon-eye-closed"></use>
                      </svg>
                   </div>
                </div>
-               <div class="custom-dropdown__list">
-                  <div class="custom-dropdown__item">физическое лицо</div>
-                  <div class="custom-dropdown__item">ООО</div>
-                  <div class="custom-dropdown__item">ИП</div>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">Войти</button>
+                  <button type="button" class="btn-white popup__close">Зарегистрироваться</button>
                </div>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="ИНН" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Наименование" required>
-            </div>
+            </form>
+         </div>
+      </div>
+   </div>
 
-            <div class="popup__form-area password-area">
-               <input type="password" class="input password-input" placeholder="Пароль" required>
-               <div class="password-icon">
-                  <svg class="password-icon__opened">
-                     <use xlink:href="#icon-eye-opened"></use>
-                  </svg>
-                  <svg class="password-icon__closed">
-                     <use xlink:href="#icon-eye-closed"></use>
-                  </svg>
+   <!--Регистрация-->
+   <div class="popup registration-popup" id="registration-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Регистрация</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Имя" required>
                </div>
-            </div>
-            <label class="agree-policy">
-               <input type="checkbox" name="policy" checked required>
-               <div class="agree-policy__box"></div>
-               <p>Подтвердите свое согласие на <a href="">обработку персональных данных</a> и <a
-                     href="">пользовательское соглашение</a></p>
-            </label>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">Зарегистрироваться</button>
-               <button type="button" class="btn-white popup__close">Войти</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Фамилия" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input tel-mask" placeholder="Телефон" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="email" class="input" placeholder="Email" required>
+               </div>
 
-<!--Регистрация успешно-->
-<div class="popup registration-success-popup" id="registration-success-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Регистрация</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <div class="popup__form-subtitle">вы успешно <br> зарегистрированы</div>
-      </div>
-      <div class="popup__buttons">
-         <button type="button" class="btn-black popup__close">войти</button>
-      </div>
-   </div>
-</div>
+               <div class="custom-dropdown">
+                  <div class="custom-dropdown__button">
+                     выберите Тип пользователя
+                     <div class="custom-dropdown__icon">
+                        <svg>
+                           <use xlink:href="#icon-chevron"></use>
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="custom-dropdown__list">
+                     <div class="custom-dropdown__item">физическое лицо</div>
+                     <div class="custom-dropdown__item">ООО</div>
+                     <div class="custom-dropdown__item">ИП</div>
+                  </div>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="ИНН" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Наименование" required>
+               </div>
 
-<!--Оставить заявку-->
-<div class="popup request-popup" id="request-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Оставить заявку</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-subtitle">
-               Оставьте заявку и мы подберем нужное Вам оборудование и подготовим специальное предлоежние.
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Имя" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input tel-mask" placeholder="Номер телефона" required>
-            </div>
-
-            <label class="agree-policy">
-               <input type="checkbox" name="policy" checked required>
-               <div class="agree-policy__box"></div>
-               <p>Подтвердите свое согласие на <a href="">обработку персональных данных</a> и <a
-                     href="">пользовательское соглашение</a></p>
-            </label>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">оставить заявку</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<!--Прислать счет-->
-<div class="popup invoice-popup" id="invoice-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Прислать счет</div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <form class="popup__form">
-            <div class="popup__form-subtitle">
-               Просто пришлите счёт от конкурентов. Прямые поставки из Китая позволят предоставить Вам лучшую цену.
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input" placeholder="Имя" required>
-            </div>
-            <div class="popup__form-area">
-               <input type="text" class="input tel-mask" placeholder="Номер телефона" required>
-            </div>
-            <div class="popup__form-area">
-               <label class="file-upload">
-                  <input type="file" accept=".pdf" required>
-                  <div class="file-upload__button">
-                     Прикрепить файл
-                     <svg>
-                        <use xlink:href="#icon-upload"></use>
+               <div class="popup__form-area password-area">
+                  <input type="password" class="input password-input" placeholder="Пароль" required>
+                  <div class="password-icon">
+                     <svg class="password-icon__opened">
+                        <use xlink:href="#icon-eye-opened"></use>
+                     </svg>
+                     <svg class="password-icon__closed">
+                        <use xlink:href="#icon-eye-closed"></use>
                      </svg>
                   </div>
-                  <div class="file-upload__container"></div>
+               </div>
+               <label class="agree-policy">
+                  <input type="checkbox" name="policy" checked required>
+                  <div class="agree-policy__box"></div>
+                  <p>Подтвердите свое согласие на <a href="">обработку персональных данных</a> и <a
+                        href="">пользовательское соглашение</a></p>
                </label>
-            </div>
-            <div class="agree-policy">
-               <p>
-                  Нажимая на кнопку ниже, вы подтверждаете свое согласие на <a href="">обработку персональных данных</a>
-                  и
-                  <a href="">пользовательское соглашение</a>
-               </p>
-            </div>
-            <div class="popup__buttons">
-               <button type="submit" class="btn-black">оставить заявку</button>
-            </div>
-         </form>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">Зарегистрироваться</button>
+                  <button type="button" class="btn-white popup__close">Войти</button>
+               </div>
+            </form>
+         </div>
       </div>
    </div>
-</div>
 
-<!--Корзина-->
-<div class="popup cart-popup" id="cart-popup">
-   <div class="popup__body">
-      <div class="popup__head">
-         <div class="popup__title">Корзина <span>(3)</span></div>
-         <div class="popup__close popup__back">
-            <svg>
-               <use xlink:href="#icon-chevron"></use>
-            </svg>
-         </div>
-      </div>
-      <div class="popup__content">
-         <div class="cart-popup__products">
-            <div class="cart__product">
-               <div class="cart__product-view">
-                  <div class="cart__product-image">
-                     <img src="img/product.png" width="64" height="64" alt="product image">
-                  </div>
-                  <a href="product.html" class="cart__product-link">
-                     <svg>
-                        <use xlink:href="#icon-arrow"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div class="cart__product-info">
-                  <div class="cart__product-name">Фильтр механический RF-SC</div>
-                  <div class="cart__product-price">425 000 ₽</div>
-                  <div class="cart__product-stock">На складе: <span>32 шт</span></div>
-               </div>
-               <div class="cart__product-quantity quantity">
-                  <button type="button" class="quantity__minus">
-                     <svg>
-                        <use xlink:href="#icon-minus"></use>
-                     </svg>
-                  </button>
-                  <input type="number" class="quantity__input" value="1" min="1">
-                  <button type="button" class="quantity__plus">
-                     <svg>
-                        <use xlink:href="#icon-plus"></use>
-                     </svg>
-                  </button>
-               </div>
-               <div class="cart__product-remove">
-                  <button type="button" aria-label="Удалить товар">
-                     <svg>
-                        <use xlink:href="#icon-delete"></use>
-                     </svg>
-                  </button>
-               </div>
-            </div>
-            <div class="cart__product">
-               <div class="cart__product-view">
-                  <div class="cart__product-image">
-                     <img src="img/product.png" width="64" height="64" alt="product image">
-                  </div>
-                  <a href="product.html" class="cart__product-link">
-                     <svg>
-                        <use xlink:href="#icon-arrow"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div class="cart__product-info">
-                  <div class="cart__product-name">Фильтр механический RF-SC</div>
-                  <div class="cart__product-price">425 000 ₽</div>
-                  <div class="cart__product-stock">На складе: <span>32 шт</span></div>
-               </div>
-               <div class="cart__product-quantity quantity">
-                  <button type="button" class="quantity__minus">
-                     <svg>
-                        <use xlink:href="#icon-minus"></use>
-                     </svg>
-                  </button>
-                  <input type="number" class="quantity__input" value="1" min="1">
-                  <button type="button" class="quantity__plus">
-                     <svg>
-                        <use xlink:href="#icon-plus"></use>
-                     </svg>
-                  </button>
-               </div>
-               <div class="cart__product-remove">
-                  <button type="button" aria-label="Удалить товар">
-                     <svg>
-                        <use xlink:href="#icon-delete"></use>
-                     </svg>
-                  </button>
-               </div>
-            </div>
-            <div class="cart__product">
-               <div class="cart__product-view">
-                  <div class="cart__product-image">
-                     <img src="img/product.png" width="64" height="64" alt="product image">
-                  </div>
-                  <a href="product.html" class="cart__product-link">
-                     <svg>
-                        <use xlink:href="#icon-arrow"></use>
-                     </svg>
-                  </a>
-               </div>
-               <div class="cart__product-info">
-                  <div class="cart__product-name">Фильтр механический RF-SC</div>
-                  <div class="cart__product-price">425 000 ₽</div>
-                  <div class="cart__product-stock">На складе: <span>32 шт</span></div>
-               </div>
-               <div class="cart__product-quantity quantity">
-                  <button type="button" class="quantity__minus">
-                     <svg>
-                        <use xlink:href="#icon-minus"></use>
-                     </svg>
-                  </button>
-                  <input type="number" class="quantity__input" value="1" min="1">
-                  <button type="button" class="quantity__plus">
-                     <svg>
-                        <use xlink:href="#icon-plus"></use>
-                     </svg>
-                  </button>
-               </div>
-               <div class="cart__product-remove">
-                  <button type="button" aria-label="Удалить товар">
-                     <svg>
-                        <use xlink:href="#icon-delete"></use>
-                     </svg>
-                  </button>
-               </div>
+   <!--Регистрация успешно-->
+   <div class="popup registration-success-popup" id="registration-success-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Регистрация</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
             </div>
          </div>
-      </div>
-      <div class="popup__buttons">
-         <a href="cart.html" class="btn-black">Продолжить</a>
-         <button type="button" class="btn-white">Очистить</button>
+         <div class="popup__content">
+            <div class="popup__form-subtitle">вы успешно <br> зарегистрированы</div>
+         </div>
+         <div class="popup__buttons">
+            <button type="button" class="btn-black popup__close">войти</button>
+         </div>
       </div>
    </div>
-</div>
+
+   <!--Оставить заявку-->
+   <div class="popup request-popup" id="request-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Оставить заявку</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-subtitle">
+                  Оставьте заявку и мы подберем нужное Вам оборудование и подготовим специальное предлоежние.
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Имя" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input tel-mask" placeholder="Номер телефона" required>
+               </div>
+
+               <label class="agree-policy">
+                  <input type="checkbox" name="policy" checked required>
+                  <div class="agree-policy__box"></div>
+                  <p>Подтвердите свое согласие на <a href="">обработку персональных данных</a> и <a
+                        href="">пользовательское соглашение</a></p>
+               </label>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">оставить заявку</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!--Прислать счет-->
+   <div class="popup invoice-popup" id="invoice-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Прислать счет</div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <form class="popup__form">
+               <div class="popup__form-subtitle">
+                  Просто пришлите счёт от конкурентов. Прямые поставки из Китая позволят предоставить Вам лучшую цену.
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input" placeholder="Имя" required>
+               </div>
+               <div class="popup__form-area">
+                  <input type="text" class="input tel-mask" placeholder="Номер телефона" required>
+               </div>
+               <div class="popup__form-area">
+                  <label class="file-upload">
+                     <input type="file" accept=".pdf" required>
+                     <div class="file-upload__button">
+                        Прикрепить файл
+                        <svg>
+                           <use xlink:href="#icon-upload"></use>
+                        </svg>
+                     </div>
+                     <div class="file-upload__container"></div>
+                  </label>
+               </div>
+               <div class="agree-policy">
+                  <p>
+                     Нажимая на кнопку ниже, вы подтверждаете свое согласие на <a href="">обработку персональных
+                        данных</a>
+                     и
+                     <a href="">пользовательское соглашение</a>
+                  </p>
+               </div>
+               <div class="popup__buttons">
+                  <button type="submit" class="btn-black">оставить заявку</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!--Корзина-->
+   <div class="popup cart-popup" id="cart-popup">
+      <div class="popup__body">
+         <div class="popup__head">
+            <div class="popup__title">Корзина <span>(3)</span></div>
+            <div class="popup__close popup__back">
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+         </div>
+         <div class="popup__content">
+            <div class="cart-popup__products">
+               <div class="cart__product">
+                  <div class="cart__product-view">
+                     <div class="cart__product-image">
+                        <img src="img/product.png" width="64" height="64" alt="product image">
+                     </div>
+                     <a href="product.html" class="cart__product-link">
+                        <svg>
+                           <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="cart__product-info">
+                     <div class="cart__product-name">Фильтр механический RF-SC</div>
+                     <div class="cart__product-price">425 000 ₽</div>
+                     <div class="cart__product-stock">На складе: <span>32 шт</span></div>
+                  </div>
+                  <div class="cart__product-quantity quantity">
+                     <button type="button" class="quantity__minus">
+                        <svg>
+                           <use xlink:href="#icon-minus"></use>
+                        </svg>
+                     </button>
+                     <input type="number" class="quantity__input" value="1" min="1">
+                     <button type="button" class="quantity__plus">
+                        <svg>
+                           <use xlink:href="#icon-plus"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="cart__product-remove">
+                     <button type="button" aria-label="Удалить товар">
+                        <svg>
+                           <use xlink:href="#icon-delete"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div class="cart__product">
+                  <div class="cart__product-view">
+                     <div class="cart__product-image">
+                        <img src="img/product.png" width="64" height="64" alt="product image">
+                     </div>
+                     <a href="product.html" class="cart__product-link">
+                        <svg>
+                           <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="cart__product-info">
+                     <div class="cart__product-name">Фильтр механический RF-SC</div>
+                     <div class="cart__product-price">425 000 ₽</div>
+                     <div class="cart__product-stock">На складе: <span>32 шт</span></div>
+                  </div>
+                  <div class="cart__product-quantity quantity">
+                     <button type="button" class="quantity__minus">
+                        <svg>
+                           <use xlink:href="#icon-minus"></use>
+                        </svg>
+                     </button>
+                     <input type="number" class="quantity__input" value="1" min="1">
+                     <button type="button" class="quantity__plus">
+                        <svg>
+                           <use xlink:href="#icon-plus"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="cart__product-remove">
+                     <button type="button" aria-label="Удалить товар">
+                        <svg>
+                           <use xlink:href="#icon-delete"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div class="cart__product">
+                  <div class="cart__product-view">
+                     <div class="cart__product-image">
+                        <img src="img/product.png" width="64" height="64" alt="product image">
+                     </div>
+                     <a href="product.html" class="cart__product-link">
+                        <svg>
+                           <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="cart__product-info">
+                     <div class="cart__product-name">Фильтр механический RF-SC</div>
+                     <div class="cart__product-price">425 000 ₽</div>
+                     <div class="cart__product-stock">На складе: <span>32 шт</span></div>
+                  </div>
+                  <div class="cart__product-quantity quantity">
+                     <button type="button" class="quantity__minus">
+                        <svg>
+                           <use xlink:href="#icon-minus"></use>
+                        </svg>
+                     </button>
+                     <input type="number" class="quantity__input" value="1" min="1">
+                     <button type="button" class="quantity__plus">
+                        <svg>
+                           <use xlink:href="#icon-plus"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="cart__product-remove">
+                     <button type="button" aria-label="Удалить товар">
+                        <svg>
+                           <use xlink:href="#icon-delete"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="popup__buttons">
+            <a href="cart.html" class="btn-black">Продолжить</a>
+            <button type="button" class="btn-white">Очистить</button>
+         </div>
+      </div>
+   </div>
 </body>
 
 </html>
